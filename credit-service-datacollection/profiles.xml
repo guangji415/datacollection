@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profilesXml xmlns="http://maven.apache.org/PROFILES/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/PROFILES/1.0.0 http://maven.apache.org/xsd/profiles-1.0.0.xsd">
+    <profiles>
+        <!--云南本地服务器部署环境-->
+        <profile>
+            <id>localhost</id>
+            <properties>
+                <!--database config-->
+                <pf.production.jdbc.driver>com.informix.jdbc.IfxDriver</pf.production.jdbc.driver>
+                <pf.production.jdbc.url>jdbc:informix-sqli://192.168.3.100:9088/CREDITDATACOLLECTION:INFORMIXSERVER=gbaseserver;</pf.production.jdbc.url>
+                <pf.production.jdbc.username>informix</pf.production.jdbc.username>
+                <pf.production.jdbc.password>111111</pf.production.jdbc.password>
+                <pf.production.jdbc.validationquery>select 1 from sysams</pf.production.jdbc.validationquery>
+                <pf.database.dialect>informix</pf.database.dialect>
+                <!--log config-->
+                <log.level>DEBUG</log.level>
+                <log.appender>CONSOLE</log.appender>
+                <!--biz config-->
+
+                <pf.dubbo.application.name>service_datacollection_test</pf.dubbo.application.name>
+                <pf.dubbo.registry.address>zookeeper://192.168.3.100:2181</pf.dubbo.registry.address>
+                <pf.dubbo.protocol>28105</pf.dubbo.protocol>
+                <pf.dubbo.service.interface>com.sic.credit.api.datacollection.biz.common.CommonBiz</pf.dubbo.service.interface>
+                <pf.dubbo.service.interface.impl>com.sic.credit.datacollection.biz.common.impl.CommonBizImpl</pf.dubbo.service.interface.impl>
+            </properties>
+        </profile>
+    </profiles>
+</profilesXml>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sic.credit.datacollection.mapper.XzzfXzcfZrrMapper">
+    <resultMap id="BaseResultMap" type="com.sic.credit.api.datacollection.domain.common.XzzfXzcfZrr">
+        <id column="ID" jdbcType="VARCHAR" property="id" />
+        <result column="CF_XDR_MC" jdbcType="VARCHAR" property="cfXdrMc" />
+        <result column="CF_XDR_SHXYM" jdbcType="VARCHAR" property="cfXdrShxym" />
+        <result column="CF_XDR_GSZC" jdbcType="VARCHAR" property="cfXdrGszc" />
+        <result column="CF_XDR_ZZJG" jdbcType="VARCHAR" property="cfXdrZzjg" />
+        <result column="CF_XDR_SWDJ" jdbcType="VARCHAR" property="cfXdrSwdj" />
+        <result column="CF_XDR_SYDW" jdbcType="VARCHAR" property="cfXdrSydw" />
+        <result column="CF_XDR_SHZZ" jdbcType="VARCHAR" property="cfXdrShzz" />
+        <result column="CF_FRDB" jdbcType="VARCHAR" property="cfFrdb" />
+        <result column="CF_FR_SFZH" jdbcType="VARCHAR" property="cfFrSfzh" />
+        <result column="CF_XDR_ZJLX" jdbcType="VARCHAR" property="cfXdrZjlx" />
+        <result column="CF_XDR_ZJHM" jdbcType="VARCHAR" property="cfXdrZjhm" />
+        <result column="CF_WSH" jdbcType="VARCHAR" property="cfWsh" />
+        <result column="CF_WFXW" jdbcType="VARCHAR" property="cfWfxw" />
+        <result column="CF_SY" jdbcType="VARCHAR" property="cfSy" />
+        <result column="CF_YJ" jdbcType="VARCHAR" property="cfYj" />
+        <result column="CF_CFLB" jdbcType="CHAR" property="cfCflb" />
+        <result column="CF_NR" jdbcType="VARCHAR" property="cfNr" />
+        <result column="CF_NR_FK" jdbcType="DECIMAL" property="cfNrFk" />
+        <result column="CF_NR_WFFF" jdbcType="DECIMAL" property="cfNrWfff" />
+        <result column="CF_NR_ZKDX" jdbcType="VARCHAR" property="cfNrZkdx" />
+        <result column="CF_JDRQ" jdbcType="DATE" property="cfJdrq" />
+        <result column="CF_YXQ" jdbcType="DATE" property="cfYxq" />
+        <result column="CF_GSJZQ" jdbcType="DATE" property="cfGsjzq" />
+        <result column="CF_CFJG" jdbcType="VARCHAR" property="cfCfjg" />
+        <result column="BZ" jdbcType="VARCHAR" property="bz" />
+        <result column="STATION_ID" jdbcType="VARCHAR" property="stationId" />
+        <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+        <result column="IMP_TYPE" jdbcType="CHAR" property="impType" />
+        <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+        <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+        <result column="CF_CFJGDM" jdbcType="VARCHAR" property="cfCfjgdm" />
+        <result column="CF_SJLY" jdbcType="VARCHAR" property="cfSjly" />
+        <result column="CF_SJLYDM" jdbcType="VARCHAR" property="cfSjlydm" />
+        <result column="REPORT_TIME" jdbcType="DATE" property="reportTime" />
+        <result column="IMP_ID" jdbcType="VARCHAR" property="impId" />
+        <result column="FLAG" jdbcType="CHAR" property="flag" />
+        <result column="IS_SUCCESS" jdbcType="CHAR" property="isSuccess" />
+        <result column="GOV_ID" jdbcType="DECIMAL" property="govId" />
+        <result column="REPORT_NOTE" jdbcType="VARCHAR" property="reportNote" />
+    </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sic.credit.datacollection.mapper.RecExcelimpLogMapper">
+  <resultMap id="BaseResultMap" type="com.sic.credit.api.datacollection.domain.common.RecExcelimpLog">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="UPLOAD_TIME" jdbcType="DATE" property="uploadTime" />
+    <result column="FILE_DATE_NAME" jdbcType="VARCHAR" property="fileDateName" />
+    <result column="UPLOAD_LOG" jdbcType="VARCHAR" property="uploadLog" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="STATION_ID" jdbcType="VARCHAR" property="stationId" />
+    <result column="UPLOAD_TYPE" jdbcType="VARCHAR" property="uploadType" />
+    <result column="DELETE_FLAG" jdbcType="CHAR" property="deleteFlag" />
+    <result column="SUCCESS_FLAG" jdbcType="CHAR" property="successFlag" />
+    <result column="FILE_REAL_NAME" jdbcType="VARCHAR" property="fileRealName" />
+    <result column="total" jdbcType="DECIMAL" property="total" />
+    <result column="success" jdbcType="DECIMAL" property="success" />
+    <result column="fail" jdbcType="DECIMAL" property="fail" />
+  </resultMap>
+</mapper>

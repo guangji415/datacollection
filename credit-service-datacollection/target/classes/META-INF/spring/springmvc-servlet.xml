@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="com.sic.credit.datacollection.action"/>
+
+    <mvc:annotation-driven/>
+    <mvc:default-servlet-handler/>
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--~~~~~~~~~~~~~~~~~  handler mapping&adapter ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <bean class="com.sic.common.web.framework.springmvc.adpater.HandlerOrderAbleRequestMappingHandlerAdapter">
+        <property name="orderAbleCustomReturnValueHandlers">
+            <map>
+                <entry key-ref="jsonMethodReturnValueHandler" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="jsonMethodReturnValueHandler"
+          class="com.sic.common.web.framework.springmvc.method.JsonMethodReturnValueHandler">
+        <constructor-arg ref="pretreatmentAbleJacksonHttpMessageConverter"/>
+    </bean>
+
+    <bean id="pretreatmentAbleJacksonHttpMessageConverter"
+          class="com.sic.common.web.framework.springmvc.converter.PretreatmentAbleJacksonHttpMessageConverter">
+        <property name="supportedMediaTypes" value="application/json"/>
+        <property name="objectMapper">
+            <bean class="com.sic.common.web.json.jackson.map.ConfigurableJsonObjectMapper">
+                <property name="visibility"
+                          value="#{T(com.sic.common.web.json.jackson.constant.Visibility).ANY}"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sic.credit.datacollection.mapper.XzzfXzxkZrrMapper">
+    <resultMap id="BaseResultMap" type="com.sic.credit.api.datacollection.domain.common.XzzfXzxkZrr">
+        <id column="ID" jdbcType="VARCHAR" property="id" />
+        <result column="XK_XDR_MC" jdbcType="VARCHAR" property="xkXdrMc" />
+        <result column="XK_XDR_SHXYM" jdbcType="VARCHAR" property="xkXdrShxym" />
+        <result column="XK_XDR_GSZC" jdbcType="VARCHAR" property="xkXdrGszc" />
+        <result column="XK_XDR_ZZJG" jdbcType="VARCHAR" property="xkXdrZzjg" />
+        <result column="XK_XDR_SWDJ" jdbcType="VARCHAR" property="xkXdrSwdj" />
+        <result column="XK_XDR_SYDW" jdbcType="VARCHAR" property="xkXdrSydw" />
+        <result column="XK_XDR_SHZZ" jdbcType="VARCHAR" property="xkXdrShzz" />
+        <result column="XK_FRDB" jdbcType="VARCHAR" property="xkFrdb" />
+        <result column="XK_FR_SFZH" jdbcType="VARCHAR" property="xkFrSfzh" />
+        <result column="XK_XDR_ZJLX" jdbcType="VARCHAR" property="xkXdrZjlx" />
+        <result column="XK_XDR_ZJHM" jdbcType="VARCHAR" property="xkXdrZjhm" />
+        <result column="XK_XKWS" jdbcType="VARCHAR" property="xkXkws" />
+        <result column="XK_WSH" jdbcType="VARCHAR" property="xkWsh" />
+        <result column="XK_XKLB" jdbcType="CHAR" property="xkXklb" />
+        <result column="XK_XKZS" jdbcType="VARCHAR" property="xkXkzs" />
+        <result column="XK_XKBH" jdbcType="VARCHAR" property="xkXkbh" />
+        <result column="XK_NR" jdbcType="VARCHAR" property="xkNr" />
+        <result column="XK_JDRQ" jdbcType="DATE" property="xkJdrq" />
+        <result column="XK_YXQZ" jdbcType="DATE" property="xkYxqz" />
+        <result column="XK_YXQZI" jdbcType="DATE" property="xkYxqzi" />
+        <result column="XK_XKJG" jdbcType="VARCHAR" property="xkXkjg" />
+        <result column="XK_ZT" jdbcType="CHAR" property="xkZt" />
+        <result column="BZ" jdbcType="VARCHAR" property="bz" />
+        <result column="STATION_ID" jdbcType="VARCHAR" property="stationId" />
+        <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+        <result column="IMP_TYPE" jdbcType="CHAR" property="impType" />
+        <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+        <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+        <result column="XK_XKJGDM" jdbcType="VARCHAR" property="xkXkjgdm" />
+        <result column="XK_LYDW" jdbcType="VARCHAR" property="xkLydw" />
+        <result column="XK_LYDWDM" jdbcType="VARCHAR" property="xkLydwdm" />
+        <result column="IMP_ID" jdbcType="VARCHAR" property="impId" />
+        <result column="FLAG" jdbcType="CHAR" property="flag" />
+        <result column="IS_SUCCESS" jdbcType="CHAR" property="isSuccess" />
+        <result column="GOV_ID" jdbcType="VARCHAR" property="govId" />
+        <result column="REPORT_NOTE" jdbcType="VARCHAR" property="reportNote" />
+        <result column="REPORT_TIME" jdbcType="DATE" property="reportTime" />
+    </resultMap>
+</mapper>
